@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/hatter.jpg);
     background-attachment: fixed;
+    font-size: 18px;
 }
 #wrapper {
     display: grid;
@@ -22,9 +23,16 @@ header {
     background-image: url(../img/fejlec.jpg);
     height: 560px;
     background-size: cover;
+    font-family: cursive;
+    padding-top: 35px;
 }
 nav {
     grid-area: nav;
+    background-color: red;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 aside {
     grid-area: aside;
@@ -35,6 +43,9 @@ article {
 }
 footer {
     grid-area: footer;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
 
 aside img {
@@ -44,5 +55,44 @@ aside img {
 #szovegben {
     float: right;
     margin-left: 5px;
-    box-shadow: 10px 10px 5px 2px grey;
+    box-shadow: 10px 10px 5px 1px grey;
+    max-width: 40%;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+    border-top: 1px white solid;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
+
+.sub {
+    color: red;
+    font-size: 20px;
+}
+
+@media all and (max-width: 600px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+        "header "
+        "nav "
+        "article"
+        "footer";
+        width: 65%;
+        margin: 0 auto;
+        background-color: ivory;
+    }
+    aside {
+        grid-area: none;
+    }
 }
