@@ -1,9 +1,48 @@
 body {
-
+    background-image: url(../img/hatter.jpg);
+    background-attachment: fixed;
 }
-.doboz {
+#wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas: 
-    "a b c";
+    "header header"
+    "nav nav"
+    "aside article"
+    "footer footer";
+    width: 65%;
+    margin: 0 auto;
+    background-color: ivory;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    color: red;
+    background-image: url(../img/fejlec.jpg);
+    height: 560px;
+    background-size: cover;
+}
+nav {
+    grid-area: nav;
+}
+aside {
+    grid-area: aside;
+}
+article {
+    grid-area: article;
+    padding: 10px;
+}
+footer {
+    grid-area: footer;
+}
+
+aside img {
+    width: 100%;
+}
+
+#szovegben {
+    float: right;
+    margin-left: 5px;
+    box-shadow: 10px 10px 5px 2px grey;
 }
