@@ -1,0 +1,9 @@
+body {
+
+}
+.doboz {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a b c";
+}
